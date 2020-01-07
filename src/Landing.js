@@ -6,11 +6,11 @@ class Landing extends Component {
     return (
       <main role='main' id='landing'>
         <section className='landing_title'>
-          <h1>Bricks and Builds</h1>
+          <h1>Brickful Builds</h1>
           <h5>LEGO Curation Made Easy</h5>
         </section>
         <section className='landing_hero'>
-          <h4><Link to='/register'><span className='link_span'> Create an account</span></Link> to start creating.</h4>
+          <h4><Link to='/registration'><span className='link_span'> Create an account</span></Link> to start organizing your builds today!</h4>
         </section>
         <section id='login'>
           <form id='login-form'>

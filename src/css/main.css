@@ -5,8 +5,14 @@
   padding: 0;
 }
 
-#landing {
-  width: 80vh;
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+main {
+  width: 85vh;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,11 +25,5 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-body {
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.2;
 }
 /*# sourceMappingURL=main.css.map */
