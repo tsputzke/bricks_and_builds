@@ -1,5 +1,10 @@
-$primary-color: red;
+@import './config';
+@import './landing';
 
 body {
-  color: $primary-color;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
 }
+
+// @include transition;

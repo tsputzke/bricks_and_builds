@@ -1,11 +1,17 @@
 import React from 'react';
-import './css/main.css'
+import {Switch, Route} from 'react-router-dom';
+import './css/main.css';
+
+import Landing from './Landing'
 
 function App() {
   return (
-    <main className='App'>
-      <h1 className='hello'>Hello World</h1>
-    </main>
+    <Switch>
+      <Landing
+        exact
+        path={'/'}
+      />
+    </Switch>
   );
 }
 

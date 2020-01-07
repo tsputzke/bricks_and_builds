@@ -1,0 +1,13 @@
+$primary-color: blue;
+$secondary-color: red;
+$accent-color: green;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition {
+  transition: all 0.5s ease-in-out;
+}
