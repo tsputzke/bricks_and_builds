@@ -1,11 +1,12 @@
 {
     "version": 3,
-    "mappings": "ACIA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;ADJD,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,KAAK;EACb,WAAW,EAAE,4BAA4B;EACzC,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,IAAI,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;CACnB",
+    "mappings": "ACIA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;ADHD,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,KAAK;EACb,WAAW,EAAE,4BAA4B;EACzC,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,IAAI,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;CACnB",
     "sources": [
         "../../scss/main.scss",
         "../../scss/_config.scss",
         "../../scss/_landing.scss",
-        "../../scss/_registration.scss"
+        "../../scss/_registration.scss",
+        "../../scss/_menu.scss"
     ],
     "names": [],
     "file": "main.css"

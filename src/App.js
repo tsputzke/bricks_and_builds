@@ -4,6 +4,7 @@ import './css/main.css';
 
 import Landing from './Landing'
 import Registration from './Registration'
+import Home from './Home'
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
       <Registration
         exact
         path={'/registration'}
+      />
+      <Home
+        exact
+        path={'/home'}
       />
     </Switch>
   );
