@@ -1,4 +1,5 @@
-  
+ // Hamburger menu styles 
+
 .menu {
   position: absolute;
   z-index: 1;
@@ -39,16 +40,15 @@
     }
 
     &.open {
-      transform: rotate(720deg);
       background: transparent;
 
       &::before {
-        transform: rotate(45deg) translate(5px, 8px);
+        transform: rotate(45deg) translate(5px, 10px);
       }
 
       &::after {
-        width: 28px;
-        transform: rotate(-45deg) translate(3px, -7px);
+        width: 40px;
+        transform: rotate(-45deg) translate(3px, -10px);
       }
     }
   }
@@ -68,14 +68,12 @@
 
   .menu-nav {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
-    background: $primary-color;
-    list-style-type: none;
-    padding-right: 1rem;
+    background: $accent-color;
+    list-style: none;
     transform: translateY(-100%);
     @include transition;
 
@@ -84,7 +82,7 @@
     }
 
     &_item {
-      transform: translateX(100vw);
+      transform: translateX(50vw);
       @include transition;
 
       &.open {
@@ -99,7 +97,6 @@
     &_link {
       display: inline-block;
       font-size: 2rem;
-      text-transform: uppercase;
       padding: 2rem 0;
       font-weight: 300;
       @include transition;
@@ -112,13 +109,13 @@
 }
 
 @for $i from 1 through 4 {
-  .menu-nav__item:nth-child(#{$i}) {
-    transition-delay: ($i * 0.1s) + 0.15s;
+  .menu-nav_item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.1s;
   }
 }
 
-#user h1 {
-  font-size: 1.3rem;
+.logged-user h1 {
+  font-size: 1.5rem;
   align-self: flex-start;
   position: absolute;
   z-index: 1;

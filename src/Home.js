@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Menu from './Menu';
 
 class Home extends Component {
   constructor(props) {
@@ -20,34 +21,31 @@ class Home extends Component {
   render() {
     return (
       <div className='root_wrapper'>
-        <header>
-          <div className='menu' onClick={this.toggleMenu}>
-            <span className={`menu_burger ${this.state.class}`}></span>
-          </div>
+        <Menu/>
+        <main role='main' id='home' >
+          <section className='favorites'>
+            <div className='favorites_image'>
+              {/* 
+              Selected favorites image - LG: 
+              
+              if favorite item is selected (tracked in state), else stock image.
+              */}
+            </div>
 
-          <nav className={`nav ${this.state.class}`}>
-            <ul className={`menu-nav ${this.state.class}`}>
-              <li className={`menu-nav_item active ${this.state.class}`}>
-                <a href='index.html' className='menu-nav_link'>Home</a>
-              </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
-                <a href='about.html' className='menu-nav_link'>Inventory</a>
-              </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
-                <a href='projects.html' className='menu-nav_link'>Add Set</a>
-              </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
-                <a href='projects.html' className='menu-nav_link'>Logout</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        <main role='main' id='user' >
-          <h1>Hello, UserName</h1>
-            <section id='search-results'>
-              <ul></ul>
-            </section>
+            <h1 className='favorites-text'>Favorites</h1>
+            <div className='favorites_items'>
+              {/* 
+              favorites images generated 
+              
+              onclick auto scroll to top, select image and options (build, info, remove)
+              */}
+              <div className='favorites_item'></div>
+              <div className='favorites_item'></div>
+              <div className='favorites_item'></div>
+              <div className='favorites_item'></div>
+              <div className='favorites_item'></div>
+            </div>
+          </section>  
         </main>
       </div>
     )

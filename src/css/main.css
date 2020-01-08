@@ -23,7 +23,7 @@
   top: 0.5rem;
   width: 40px;
   height: 4px;
-  background: blue;
+  background: purple;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -34,7 +34,7 @@
   top: -10px;
   width: 40px;
   height: 4px;
-  background: blue;
+  background: purple;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -45,26 +45,24 @@
   top: 10px;
   width: 34px;
   height: 4px;
-  background: blue;
+  background: purple;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .menu_burger.open {
-  -webkit-transform: rotate(720deg);
-          transform: rotate(720deg);
   background: transparent;
 }
 
 .menu_burger.open::before {
-  -webkit-transform: rotate(45deg) translate(5px, 8px);
-          transform: rotate(45deg) translate(5px, 8px);
+  -webkit-transform: rotate(45deg) translate(5px, 10px);
+          transform: rotate(45deg) translate(5px, 10px);
 }
 
 .menu_burger.open::after {
-  width: 28px;
-  -webkit-transform: rotate(-45deg) translate(3px, -7px);
-          transform: rotate(-45deg) translate(3px, -7px);
+  width: 40px;
+  -webkit-transform: rotate(-45deg) translate(3px, -10px);
+          transform: rotate(-45deg) translate(3px, -10px);
 }
 
 .nav {
@@ -86,8 +84,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -95,10 +93,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  overflow: hidden;
-  background: blue;
-  list-style-type: none;
-  padding-right: 1rem;
+  background: lightgrey;
+  list-style: none;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: all 0.5s ease-in-out;
@@ -111,8 +107,8 @@
 }
 
 .nav .menu-nav_item {
-  -webkit-transform: translateX(100vw);
-          transform: translateX(100vw);
+  -webkit-transform: translateX(50vw);
+          transform: translateX(50vw);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -129,7 +125,6 @@
 .nav .menu-nav_link {
   display: inline-block;
   font-size: 2rem;
-  text-transform: uppercase;
   padding: 2rem 0;
   font-weight: 300;
   -webkit-transition: all 0.5s ease-in-out;
@@ -140,34 +135,62 @@
   color: red;
 }
 
-.menu-nav__item:nth-child(1) {
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
+.menu-nav_item:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
-.menu-nav__item:nth-child(2) {
-  -webkit-transition-delay: 0.35s;
-          transition-delay: 0.35s;
+.menu-nav_item:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
-.menu-nav__item:nth-child(3) {
-  -webkit-transition-delay: 0.45s;
-          transition-delay: 0.45s;
+.menu-nav_item:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
-.menu-nav__item:nth-child(4) {
-  -webkit-transition-delay: 0.55s;
-          transition-delay: 0.55s;
+.menu-nav_item:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
-#user h1 {
-  font-size: 1.3rem;
+.logged-user h1 {
+  font-size: 1.5rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
   position: absolute;
   z-index: 1;
   left: 1.5rem;
   top: 1.3rem;
+}
+
+.favorites {
+  width: 100%;
+}
+
+.favorites_image {
+  height: 100vh;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.favorites_items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.favorites_item {
+  height: 300px;
+  width: 300px;
+  background-color: grey;
 }
 
 body {
@@ -177,7 +200,6 @@ body {
 }
 
 main {
-  width: 85vh;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,7 +215,7 @@ main {
 }
 
 a {
-  color: blue;
+  color: purple;
   text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
