@@ -3,6 +3,7 @@
 @import './registration';
 @import './menu';
 @import './home';
+@import './display';
 
 body {
   height: 100vh;
@@ -21,16 +22,6 @@ main {
 a {
   color: $primary-color;
   text-decoration: none;
-}
-
-.selected {
-  width: 100%;
-
-  &_image {
-    height: 40vh;
-    width: 100%;
-    background-color: lightgrey;
-  }
 }
 
 // @include transition;

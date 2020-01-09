@@ -20,7 +20,7 @@
 .menu_burger {
   position: absolute;
   right: 0;
-  top: 0.5rem;
+  top: 1rem;
   width: 40px;
   height: 4px;
   background: purple;
@@ -162,7 +162,7 @@
   position: absolute;
   z-index: 1;
   left: 1.5rem;
-  top: 1.3rem;
+  top: 1.5rem;
 }
 
 .favorites_items {
@@ -181,6 +181,16 @@
   height: 300px;
   width: 300px;
   background-color: grey;
+}
+
+.selected {
+  width: 100%;
+}
+
+.selected_image {
+  height: 40vh;
+  width: 100%;
+  background-color: lightgrey;
 }
 
 body {
@@ -207,15 +217,5 @@ main {
 a {
   color: purple;
   text-decoration: none;
-}
-
-.selected {
-  width: 100%;
-}
-
-.selected_image {
-  height: 40vh;
-  width: 100%;
-  background-color: lightgrey;
 }
 /*# sourceMappingURL=main.css.map */
