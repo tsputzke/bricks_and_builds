@@ -6,6 +6,7 @@ import Landing from './Landing';
 import Registration from './Registration';
 import Home from './Home';
 import Add from './Add';
+import Inventory from './Inventory';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       <Add
         exact
         path={'/add'}
+      />
+      <Inventory
+        exact
+        path={'/inventory'}
       />
     </Switch>
   );

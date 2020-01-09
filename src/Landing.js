@@ -29,6 +29,10 @@ class Landing extends Component {
               </fieldset>
             </form>
           </section>
+          <section>
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu malesuada quam. Nulla sodales enim sed mauris ullamcorper, at convallis nisi dictum. Vestibulum vehicula ante tellus, nec vehicula arcu porttitor at. Nunc varius quis ipsum at convallis. Nunc sed ante non felis ultrices tincidunt. Aenean at semper diam, vitae imperdiet lacus. Nunc vulputate, nibh luctus ornare consectetur, velit turpis faucibus quam, quis finibus lectus nunc at risus. Quisque eu lacus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat luctus, convallis purus in, lobortis nisi.</p>
+          </section>
         </main>
       </div>
     )

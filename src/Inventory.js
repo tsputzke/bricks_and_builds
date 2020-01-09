@@ -16,10 +16,10 @@ class Inventory extends Component {
               */}
             </div>
 
-            <h1 className='favorites-text'>Favorites</h1>
+            <h1 className='favorites-text'>Inventory</h1>
             <div className='favorites_items'>
               {/* 
-              favorites images generated 
+              inventory images generated 
               
               onclick auto scroll to top, select image and options (build, info, remove)
               */}
