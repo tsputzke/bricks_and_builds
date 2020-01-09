@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 
-class Home extends Component {
+class Inventory extends Component {
   render() {
     return (
       <div className='root_wrapper'>
         <Menu/>
-        <main role='main' id='home' >
+        <main role='main' id='inventory' >
           <section className='selected'>
             <div className='selected_image'>
               {/* 
-              Selected favorites image - LG: 
+              Selected inventory image - LG: 
               
               if favorite item is selected (tracked in state), else no display.
               */}
@@ -36,4 +36,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Inventory

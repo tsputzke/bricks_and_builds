@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Menu extends Component {
   constructor(props) {
@@ -27,17 +28,17 @@ class Menu extends Component {
 
           <nav className={`nav ${this.state.class}`}>
             <ul className={`menu-nav ${this.state.class}`}>
-              <li className={`menu-nav_item active ${this.state.class}`}>
-                <a href='index.html' className='menu-nav_link'>Home</a>
+              <li className={`menu-nav_item active ${this.state.class}`} onClick={this.toggleMenu}>
+                <Link to='/home' className='menu-nav_link'>Home</Link>
               </li>
               <li className={`menu-nav_item ${this.state.class}`}>
-                <a href='about.html' className='menu-nav_link'>Inventory</a>
+                <Link to='/inventory' className='menu-nav_link'>Inventory</Link>
               </li>
               <li className={`menu-nav_item ${this.state.class}`}>
-                <a href='projects.html' className='menu-nav_link'>Add Set</a>
+                <Link to='/add' className='menu-nav_link'>Add Set</Link>
               </li>
               <li className={`menu-nav_item ${this.state.class}`}>
-                <a href='projects.html' className='menu-nav_link'>Logout</a>
+                <Link to='/' className='menu-nav_link'>Logout</Link>
               </li>
             </ul>
           </nav>

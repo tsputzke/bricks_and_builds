@@ -23,4 +23,14 @@ a {
   text-decoration: none;
 }
 
+.selected {
+  width: 100%;
+
+  &_image {
+    height: 40vh;
+    width: 100%;
+    background-color: lightgrey;
+  }
+}
+
 // @include transition;

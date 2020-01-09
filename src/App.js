@@ -2,9 +2,10 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import './css/main.css';
 
-import Landing from './Landing'
-import Registration from './Registration'
-import Home from './Home'
+import Landing from './Landing';
+import Registration from './Registration';
+import Home from './Home';
+import Add from './Add';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
       <Home
         exact
         path={'/home'}
+      />
+      <Add
+        exact
+        path={'/add'}
       />
     </Switch>
   );

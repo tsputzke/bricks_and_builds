@@ -165,16 +165,6 @@
   top: 1.3rem;
 }
 
-.favorites {
-  width: 100%;
-}
-
-.favorites_image {
-  height: 100vh;
-  width: 100%;
-  background-color: lightgrey;
-}
-
 .favorites_items {
   display: -ms-grid;
   display: grid;
@@ -217,5 +207,15 @@ main {
 a {
   color: purple;
   text-decoration: none;
+}
+
+.selected {
+  width: 100%;
+}
+
+.selected_image {
+  height: 40vh;
+  width: 100%;
+  background-color: lightgrey;
 }
 /*# sourceMappingURL=main.css.map */
