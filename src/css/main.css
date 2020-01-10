@@ -194,6 +194,12 @@
   background-color: lightgrey;
 }
 
+.selected_image h1 {
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+}
+
 .selected_image img {
   width: 100%;
   height: auto;
@@ -205,7 +211,25 @@
 }
 
 .search_set_form {
-  margin-top: 20px;
+  width: 280px;
+  margin: 20px auto;
+}
+
+.search-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.search-result_button {
+  height: 50px;
+  width: 200px;
+  margin: 5px auto;
 }
 
 body {

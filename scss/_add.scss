@@ -4,5 +4,18 @@
 }
 
 .search_set_form {
-  margin-top: 20px;
+  width: 280px;
+  margin: 20px auto;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &_button {
+    height: 50px;
+    width: 200px;
+    margin: 5px auto;
+  }
 }
