@@ -183,15 +183,9 @@
   background-color: grey;
 }
 
-.selected {
-  width: 100%;
-}
-
 .selected_image {
-  height: 30vh;
   width: 100%;
-  overflow: hidden;
-  background-color: lightgrey;
+  height: auto;
 }
 
 .selected_image h1 {
@@ -200,9 +194,54 @@
       align-self: auto;
 }
 
-.selected_image img {
+.display_items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.display_item {
+  height: 200px;
+  width: 300px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.display_item:hover {
+  cursor: pointer;
+}
+
+.display_item img {
   width: 100%;
   height: auto;
+}
+
+.selected-item {
+  text-align: center;
+}
+
+.selected-item .selected-flex_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.selected-item_button {
+  height: 50px;
+  width: 200px;
+  margin: 5px auto;
 }
 
 .search-image {
@@ -211,7 +250,7 @@
 }
 
 .search_set_form {
-  width: 280px;
+  width: 300px;
   margin: 20px auto;
 }
 

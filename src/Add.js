@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
+import Display from './Display';
 import { Link } from 'react-router-dom';
 
 class Add extends Component {
@@ -43,7 +44,7 @@ class Add extends Component {
         <Menu/>
         <form onSubmit={this.handleSetSearch} className='search_set_form'>
           <fieldset>
-            <legend>Search for LEGO sets to add to your inventory</legend>
+            <legend>Add LEGO sets that you own to your virtual collection, then explore more possibilities!</legend>
             <label htmlFor='search_set'>Set-number:  </label>
             <input type='text' name='search_set' id='search_set' />
             <button type='submit'>Search</button>

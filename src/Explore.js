@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Menu from './Menu';
 import Display from './Display';
 
-class Inventory extends Component {
+class Explore extends Component {
   render() {
     return (
       <div className='root_wrapper'>
@@ -13,4 +13,4 @@ class Inventory extends Component {
   }
 }
 
-export default Inventory
+export default Explore

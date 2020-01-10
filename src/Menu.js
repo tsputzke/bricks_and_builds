@@ -32,10 +32,13 @@ class Menu extends Component {
                 <Link to='/home' className='menu-nav_link'>Home</Link>
               </li>
               <li className={`menu-nav_item ${this.state.class}`}>
+                <Link to='/add' className='menu-nav_link'>Add Set</Link>
+              </li>
+              <li className={`menu-nav_item ${this.state.class}`}>
                 <Link to='/inventory' className='menu-nav_link'>Inventory</Link>
               </li>
               <li className={`menu-nav_item ${this.state.class}`}>
-                <Link to='/add' className='menu-nav_link'>Add Set</Link>
+                <Link to='/explore' className='menu-nav_link'>Explore</Link>
               </li>
               <li className={`menu-nav_item ${this.state.class}`}>
                 <Link to='/' className='menu-nav_link'>Logout</Link>
