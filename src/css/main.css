@@ -165,24 +165,6 @@
   top: 1.5rem;
 }
 
-.favorites_items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-gap: 20px;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.favorites_item {
-  height: 300px;
-  width: 300px;
-  background-color: grey;
-}
-
 .selected_image {
   width: 100%;
   height: auto;
@@ -255,14 +237,19 @@
 }
 
 .search-result {
+  text-align: center;
+}
+
+.search-result-flex_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .search-result_button {

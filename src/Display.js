@@ -24,11 +24,6 @@ class Display extends Component {
           </div> 
 
           <div className='display_items'>
-            {/* 
-            favorites/explore/searched images generated 
-            
-            onclick auto scroll to top, select image and options (build, info, add, remove)
-            */}
             <div className='display_item' onClick={() => this.setState({selected: 'https://cdn.rebrickable.com/media/sets/10693-1.jpg'})}><img src='https://cdn.rebrickable.com/media/sets/10693-1.jpg' alt='alt'></img></div>
             <div className='display_item' onClick={() => this.setState({selected: 'https://cdn.rebrickable.com/media/sets/10695-1.jpg'})}><img src='https://cdn.rebrickable.com/media/sets/10695-1.jpg' alt='alt'></img></div>
             <div className='display_item' onClick={() => this.setState({selected: 'https://cdn.rebrickable.com/media/sets/10687-1.jpg'})}><img src='https://cdn.rebrickable.com/media/sets/10687-1.jpg' alt='alt'></img></div>

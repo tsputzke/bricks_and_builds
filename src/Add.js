@@ -54,7 +54,9 @@ class Add extends Component {
         {this.state.searchResults ? (
           <>
             <img className='search-image' src={this.state.searchResults.set_img_url} alt='alt'></img>
+            
             <div className='search-result'>
+              <div className='search-result-flex_container'></div>
               <h1>{this.state.searchResults.name}</h1>
               <Link to='/home'>
                 <button className='search-result_button'>Add</button>
