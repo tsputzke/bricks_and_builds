@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import './css/main.css';
 
 import Landing from './Landing';
@@ -31,9 +31,7 @@ function App() {
         exact
         path={'/inventory'}
       />
-      <Route
-        component={Landing}
-      />
+      <Landing/>
     </Switch>
   );
 }

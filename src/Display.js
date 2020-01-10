@@ -6,6 +6,7 @@ class Display extends Component {
       <main role='main' id='display' >
         <section className='selected'>
           <div className='selected_image'>
+            <img src={this.props.image} alt='text'></img> 
             {/* 
             Selected image (LG): 
             

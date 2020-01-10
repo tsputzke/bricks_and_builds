@@ -2,8 +2,14 @@
   width: 100%;
 
   &_image {
-    height: 40vh;
+    height: 30vh;
     width: 100%;
+    overflow: hidden;
     background-color: lightgrey;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
