@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "tsputzke-bricksandbuilds",
+  "name": "bricks_and_builds",
+  "routes": [
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": ".*",
+        "dest": "/index.html"
+      }
+  ]
+}

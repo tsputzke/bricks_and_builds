@@ -7,7 +7,7 @@ class Landing extends Component {
       <div className='root_wrapper'>
         <main role='main' id='landing'>
           <section className='landing_title'>
-            <h1>Brickful Builds</h1>
+            <h1>Bricks and Builds</h1>
             <h5>LEGO Curation Made Easy</h5>
           </section>
           <section className='landing_hero'>
