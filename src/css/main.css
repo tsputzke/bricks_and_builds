@@ -155,6 +155,11 @@
           transition-delay: 0.5s;
 }
 
+.menu-nav_item:nth-child(5) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
 .logged-user h1 {
   font-size: 1.5rem;
   -ms-flex-item-align: start;
@@ -165,6 +170,11 @@
   top: 1.5rem;
 }
 
+.display-header {
+  width: 100%;
+  border: 1px solid purple;
+}
+
 .selected_image {
   width: 100%;
   height: auto;
@@ -172,7 +182,6 @@
 
 .selected-item {
   text-align: center;
-  margin-bottom: 15px;
 }
 
 .display_items {
@@ -185,6 +194,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 
 .display_item {

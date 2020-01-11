@@ -7,6 +7,7 @@ import Registration from './Registration';
 import Home from './Home';
 import Add from './Add';
 import Explore from './Explore';
+import Inventory from './Inventory';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
       <Explore
         exact
         path={'/explore'}
+      />
+      <Inventory
+        exact
+        path={'/inventory'}
       />
       <Landing/>
     </Switch>

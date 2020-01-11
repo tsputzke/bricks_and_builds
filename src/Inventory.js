@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Menu from './Menu';
 import Display from './Display';
 
-class Explore extends Component {
+class Inventory extends Component {
   render() {
-    const displayTitle = 'Explore'
-    const displayHeader = 'See what else you can build with your collection'
+    const displayTitle = 'Inventory'
+    const displayHeader = 'LEGO sets in your collection'
     return (
       <div className='root_wrapper'>
         <Menu/>
@@ -15,4 +15,4 @@ class Explore extends Component {
   }
 }
 
-export default Explore
+export default Inventory
