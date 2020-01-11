@@ -4,10 +4,11 @@
   &_image {
     width: 100%;
     height: auto;
+  }
 
-    h1 {
-      align-self: auto;
-    }
+  &-item {
+    text-align: center;
+    margin-bottom: 15px;;
   }
 }
 
@@ -33,21 +34,5 @@
   img {
     width: 100%;
     height: auto;
-  }
-}
-
-.selected-item {
-  text-align: center;
-
-  .selected-flex_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  &_button {
-    height: 50px;
-    width: 200px;
-    margin: 5px auto;
   }
 }

@@ -29,4 +29,19 @@ a {
   text-decoration: none;
 }
 
+// In Add and Display components
+.selected-item {
+  .selected-flex_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  &_button {
+    height: 50px;
+    width: 150px;
+    margin: 5px auto;
+  }
+}
+
 // @include transition;

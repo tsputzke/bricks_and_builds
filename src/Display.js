@@ -12,11 +12,12 @@ class Display extends Component {
   render() {
     return (
       <main role='main' id='display' >
-        <section className='selected'><img className='selected_image' src={this.state.selected} alt='alt'></img>
+        <section className='selected'>
+          <img className='selected_image' src={this.state.selected} alt='alt'></img>
           <div className='selected-item'>
-            <h1>Selected set name</h1>
+            <h1>Set Name</h1>
             <div className='selected-flex_container'>
-              <a href='/' rel='noopener noreferrer' target='_blank'><button className='search-result_button'>Build</button></a>
+              <a href='/' rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
               <Link to='/home'>
                 <button className='selected-item_button'>Remove</button>
               </Link>

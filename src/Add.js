@@ -54,14 +54,14 @@ class Add extends Component {
         {this.state.searchResults ? (
           <>
             <img className='search-image' src={this.state.searchResults.set_img_url} alt='alt'></img>
-            
-            <div className='search-result'>
-              <div className='search-result-flex_container'></div>
+            <div className='selected-item'>
               <h1>{this.state.searchResults.name}</h1>
-              <Link to='/home'>
-                <button className='search-result_button'>Add</button>
-              </Link>
-              <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='search-result_button'>Info</button></a>
+              <div className='selected-flex_container'>
+                <Link to='/home'>
+                  <button className='selected-item_button'>Add</button>
+                </Link>
+                <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Info</button></a>
+              </div>
             </div> 
           </>
         ) : (
