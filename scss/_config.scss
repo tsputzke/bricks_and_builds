@@ -1,6 +1,12 @@
-$primary-color: purple;
-$secondary-color: red;
-$accent-color: lightgrey;
+$gold: #D79922;
+$cream: #EFE2BA;
+$red: #F13C20;
+$blue: #4056A1;
+$lightblue: #C5CBE3;
+
+$primary-color: $blue;
+$secondary-color: $red;
+$accent-color: $gold;
 
 * {
   box-sizing: border-box;

@@ -1,6 +1,8 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './css/main.css';
+import PrivateRoute from '../src/utils/PrivateOnlyRoute'
+import PublicOnlyRoute from '../src/utils/PublicOnlyRoute'
 
 import Landing from './Landing';
 import Registration from './Registration';
@@ -12,31 +14,39 @@ import Inventory from './Inventory';
 function App() {
   return (
     <Switch>
-      <Landing
+      <PublicOnlyRoute
         exact
         path={'/'}
+        component={Landing}
       />
-      <Registration
+      <PublicOnlyRoute
         exact
         path={'/registration'}
+        comoponent={Registration}
       />
-      <Home
+      <PrivateRoute
         exact
         path={'/home'}
+        component={Home}
       />
-      <Add
+      <PrivateRoute
         exact
         path={'/add'}
+        component={Add}
       />
-      <Explore
+      <PrivateRoute
         exact
         path={'/explore'}
+        component={Explore}
       />
-      <Inventory
+      <PrivateRoute
         exact
         path={'/inventory'}
+        component={Inventory}
       />
-      <Landing/>
+      <Route
+        component={Landing}
+      />
     </Switch>
   );
 }
