@@ -40,7 +40,10 @@ class Menu extends Component {
               <li className={`menu-nav_item ${this.state.class}`}>
                 <Link to='/explore' className='menu-nav_link'>Explore</Link>
               </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
+              <li 
+                className={`menu-nav_item ${this.state.class}`}
+                onClick={sessionStorage.clear()}  
+              >
                 <Link to='/' className='menu-nav_link'>Logout</Link>
               </li>
             </ul>

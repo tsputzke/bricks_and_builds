@@ -24,7 +24,7 @@ class Add extends Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'key f2b3394260806f7bee812c727943dc2d'
+        'Authorization': 'key xyz'
       }
     })
     // If call is successful
