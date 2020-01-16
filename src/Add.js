@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
-import Display from './Display';
 import { Link } from 'react-router-dom';
 
 class Add extends Component {
@@ -12,25 +11,24 @@ class Add extends Component {
     }
   }
 
+  // get set by set_id
   handleSetSearch = e => {
     e.preventDefault();
-    // make a fetch request to rebrickable
+    this.setState({error: ''})
     if (!e.target.search_set.value) {
       this.setState({error: 'Enter set number to continue'})
     } else {
     const searchTerm = e.target.search_set.value.trim();
-
-    fetch(`https://rebrickable.com/api/v3/lego/sets/${searchTerm}-1`, {
+    fetch(`http://localhost:8000/api/rebrickable/${searchTerm}`, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'key xyz'
-      }
+      headers: { 'Content-Type': 'application/json' },
     })
     // If call is successful
     .then(res => res.json())
     .then( res => {
-      res.set_num ? this.setState({searchResults: res}) : this.setState({error: 'Invalid set number, try again'})
+      res.set_num ? 
+        this.setState({searchResults: res}) : 
+        this.setState({searchResults: null, error: 'Invalid set number, try again'})
     })
     // If call fails
     .catch(err => console.log(err))
@@ -48,7 +46,7 @@ class Add extends Component {
             <label htmlFor='search_set'>Set-number:  </label>
             <input type='text' name='search_set' id='search_set' />
             <button type='submit'>Search</button>
-            {this.state.error ? <p>{this.state.error}</p> : null}
+            {this.state.error.length ? <p>{this.state.error}</p> : null}
           </fieldset>
         </form>
         {this.state.searchResults ? (
