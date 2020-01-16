@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './css/main.css';
 import PrivateRoute from '../src/utils/PrivateOnlyRoute'
@@ -11,44 +11,46 @@ import Add from './Add';
 import Explore from './Explore';
 import Inventory from './Inventory';
 
-function App() {
-  return (
-    <Switch>
-      <PublicOnlyRoute
-        exact
-        path={'/'}
-        component={Landing}
-      />
-      <PublicOnlyRoute
-        exact
-        path={'/registration'}
-        comoponent={Registration}
-      />
-      <PrivateRoute
-        exact
-        path={'/home'}
-        component={Home}
-      />
-      <PrivateRoute
-        exact
-        path={'/add'}
-        component={Add}
-      />
-      <PrivateRoute
-        exact
-        path={'/explore'}
-        component={Explore}
-      />
-      <PrivateRoute
-        exact
-        path={'/inventory'}
-        component={Inventory}
-      />
-      <Route
-        component={Landing}
-      />
-    </Switch>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Switch>
+        <PublicOnlyRoute
+          exact
+          path={'/'}
+          component={Landing}
+        />
+        <PublicOnlyRoute
+          exact
+          path={'/registration'}
+          component={Registration}
+        />
+        <PrivateRoute
+          exact
+          path={'/home'}
+          component={Home}
+        />
+        <PrivateRoute
+          exact
+          path={'/add'}
+          component={Add}
+        />
+        <PrivateRoute
+          exact
+          path={'/explore'}
+          component={Explore}
+        />
+        <PrivateRoute
+          exact
+          path={'/inventory'}
+          component={Inventory}
+        />
+        <Route
+          component={Landing}
+        />
+      </Switch>
+    );
+  }
 }
 
 export default App;

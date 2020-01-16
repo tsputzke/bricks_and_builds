@@ -5,4 +5,11 @@ import App from './App';
 import ScrollToTop from './ScrollToTop'
 import './index.css';
 
-ReactDOM.render(<BrowserRouter><ScrollToTop><App /></ScrollToTop></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <ScrollToTop>
+      <App />
+    </ScrollToTop>                      
+  </BrowserRouter>, 
+  document.getElementById('root')
+);

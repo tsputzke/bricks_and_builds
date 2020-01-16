@@ -19,6 +19,7 @@ class Menu extends Component {
   }
 
   render() {
+    const username = window.sessionStorage.getItem('user_name')
     return (
       <div className='menu_wrapper'>
         <header>
@@ -42,7 +43,7 @@ class Menu extends Component {
               </li>
               <li 
                 className={`menu-nav_item ${this.state.class}`}
-                onClick={sessionStorage.clear()}  
+                onClick={() => sessionStorage.clear()}  
               >
                 <Link to='/' className='menu-nav_link'>Logout</Link>
               </li>
@@ -51,7 +52,7 @@ class Menu extends Component {
         </header>
 
         <section className='logged-user' >
-          <h1>Hello, UserName</h1>
+          <h1>Hello, {username}</h1>
             <section className='display-favorites'>
               <ul></ul>
             </section>

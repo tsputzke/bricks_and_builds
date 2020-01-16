@@ -11,6 +11,7 @@ class Landing extends Component {
     }
   }  
 
+  // User login
   handleLogin = e => {
     e.preventDefault();
 
@@ -33,6 +34,25 @@ class Landing extends Component {
       .catch(res => {
         this.setState({ error: res.error })
       })
+    }
+
+    // Demo account credentials
+    handleDemoLogin() {
+      const user = {
+        user_name: 'TestUser',
+        password: 'testuser1!',
+      }
+      
+      AuthApiService.postLogin(user)
+        .then(res => {
+          TokenService.saveAuthToken(res.authToken)
+          window.sessionStorage.setItem('user_id', res.user_id)
+          window.sessionStorage.setItem('user_name', user.user_name) 
+          window.location= '/home'
+        })
+        .catch(res => {
+          this.setState({ error: res.error })
+        })
     }
 
   render() {
@@ -64,16 +84,16 @@ class Landing extends Component {
                 </div>
                 <button type='submit'>Login</button>
               </fieldset>
+              <div role='alert'>
+                {error && <p className='error'>{error}</p>}
+              </div>
             </form>
           </section>
           <section>
             <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu malesuada quam. Nulla sodales enim sed mauris ullamcorper, at convallis nisi dictum. Vestibulum vehicula ante tellus, nec vehicula arcu porttitor at. Nunc varius quis ipsum at convallis. Nunc sed ante non felis ultrices tincidunt. Aenean at semper diam, vitae imperdiet lacus. Nunc vulputate, nibh luctus ornare consectetur, velit turpis faucibus quam, quis finibus lectus nunc at risus. Quisque eu lacus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat luctus, convallis purus in, lobortis nisi.</p>
+            <p>Check out a <span onClick={() => this.handleDemoLogin()}>demo</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu malesuada quam. Nulla sodales enim sed mauris ullamcorper, at convallis nisi dictum. Vestibulum vehicula ante tellus, nec vehicula arcu porttitor at. Nunc varius quis ipsum at convallis. Nunc sed ante non felis ultrices tincidunt. Aenean at semper diam, vitae imperdiet lacus. Nunc vulputate, nibh luctus ornare consectetur, velit turpis faucibus quam, quis finibus lectus nunc at risus. Quisque eu lacus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat luctus, convallis purus in, lobortis nisi.</p>
           </section>
         </main>
-        <div role='alert'>
-          {error && <p className='error'>{error}</p>}
-        </div>
       </div>
     )
   }
