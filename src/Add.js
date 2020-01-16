@@ -31,12 +31,13 @@ class Add extends Component {
         this.setState({searchResults: null, error: 'Invalid set number, try again'})
     })
     // If call fails
-    .catch(err => console.log(err))
+    .catch(res => {
+      this.setState({ error: res.error })
+    })
     }
   }
 
   render() {
-    console.log(this.state.searchResults)
     return (
       <div className='root_wrapper'>
         <Menu/>
@@ -44,7 +45,7 @@ class Add extends Component {
           <fieldset>
             <legend>Add LEGO sets that you own to your virtual collection, then explore more possibilities!</legend>
             <label htmlFor='search_set'>Set-number:  </label>
-            <input type='text' name='search_set' id='search_set' />
+            <input type='text' name='search_set' id='search_set' maxLength='6'/>
             <button type='submit'>Search</button>
             {this.state.error.length ? <p>{this.state.error}</p> : null}
           </fieldset>

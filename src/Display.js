@@ -70,6 +70,9 @@ class Display extends Component {
           return({message: 'delete successful'});
       })
       .then(window.location.reload())
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
   }
 
   render() {
