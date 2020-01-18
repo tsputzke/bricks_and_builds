@@ -46,7 +46,7 @@ class Add extends Component {
       user_id: window.sessionStorage.getItem('user_id'),
       set_name: this.state.searchResults.name, 
       image_url: this.state.searchResults.set_img_url, 
-      build_url: this.state.searchResults.set_url 
+      set_num: this.state.searchResults.set_num 
     };
 
     fetch(config.API_ENDPOINT + `/api/inventory`, {
@@ -67,7 +67,6 @@ class Add extends Component {
     }
 
   render() {
-    console.log(this.state.searchResults)
     const { error } = this.state
     return (
       <div className='root_wrapper'>

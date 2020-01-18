@@ -8,8 +8,8 @@ class Display extends Component {
 
     this.state = {
       displaySets: [],
-      selected: {image_url: 'https://cdn.rebrickable.com/media/sets/10693-1.jpg'},
-      selectId: ''
+      placeholder: 'https://cdn.rebrickable.com/media/sets/10693-1.jpg',
+      selected: {}
     }
   }
 
@@ -93,13 +93,13 @@ class Display extends Component {
           {error && <p className='error'>{error}</p>}
         </div>
         <section className='selected'>
-          {this.state.selected ? (
+          {this.state.selected.set_name ? (
           <>
             <img className='selected_image' src={this.state.selected.image_url} alt='alt'></img>
             <div className='selected-item'>
               <h2>Set Name</h2>
               <div className='selected-flex_container'>
-                <a href={this.state.selected.build_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
+                <a href={`https://rebrickable.com/instructions/${this.state.selected.set_num}`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
                 <button 
                   className='selected-item_button'
                   onClick={() => {
@@ -112,7 +112,7 @@ class Display extends Component {
               </div>
             </div> 
           </>)
-          : null
+          : <img className='selected_image' src={this.state.placeholder} alt='alt'></img>
           }
           <ul className='display_items'>
             {renderSets}
