@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Menu from './Menu';
 import config from './config';
 import TokenService from './services/token-service';
+import LegoSetId from './images/lego-set_id.jpg';
 
 class Add extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      placeholder: 'https://cdn.rebrickable.com/media/sets/10692-1.jpg',
       error: ''
     }
   }
@@ -93,7 +93,7 @@ class Add extends Component {
             </div> 
           </>
         ) : (
-          <img className='search-image' src={this.state.placeholder} alt='altPlaceholder'></img>
+          <img className='search-image' src={LegoSetId} alt='LEGO box with set_id'></img>
         )}
       </div>   
     )
