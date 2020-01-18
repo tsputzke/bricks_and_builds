@@ -6,10 +6,11 @@ class Inventory extends Component {
   render() {
     const displayTitle = 'Inventory'
     const displayHeader = 'LEGO sets in your collection'
+    const selectId = 'inventory'
     return (
       <div className='root_wrapper'>
         <Menu/>
-        <Display displayTitle={displayTitle} displayHeader={displayHeader}/>
+        <Display displayTitle={displayTitle} displayHeader={displayHeader} selectId={selectId}/>
       </div>
     )
   }

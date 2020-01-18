@@ -7,15 +7,16 @@ class Display extends Component {
     super(props);
 
     this.state = {
-      favorites: [],
-      selected: {image_url: 'https://cdn.rebrickable.com/media/sets/10693-1.jpg'}
+      displaySets: [],
+      selected: {image_url: 'https://cdn.rebrickable.com/media/sets/10693-1.jpg'},
+      selectId: ''
     }
   }
 
   componentDidMount() {
-    // Add array of favorite sets to state
+    // Add array of sets to state
     const userId = window.sessionStorage.getItem('user_id')
-      fetch(config.API_ENDPOINT + `/api/favorites/${userId}`, {
+      fetch(config.API_ENDPOINT + `/api/${this.props.selectId}/${userId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +25,7 @@ class Display extends Component {
       })
       // If call is successful
       .then(res => res.json() )
-      .then(res => { this.setState({favorites: res}) })
+      .then(res => { this.setState({displaySets: res}) })
       // If call fails
       .catch(res => {
         this.setState({ error: res.error })
@@ -33,14 +34,14 @@ class Display extends Component {
 
   // Return list item for each set
   renderSets = () => {
-    const userFavorites = this.state.favorites
-    return userFavorites.map((favorite, i) => {
+    const userSets = this.state.displaySets
+    return userSets.map((set, i) => {
         return <li 
                 key={i}
                 className='display_item'
-                onClick={() => this.updateSelectedState(favorite)}> 
-                <img src={favorite.image_url} alt='favorite set'></img>
-                <p className='set_name'>{favorite.set_name}</p>
+                onClick={() => this.updateSelectedState(set)}> 
+                <img src={set.image_url} alt='set in display'></img>
+                <p className='set_name'>{set.set_name}</p>
               </li>
     })    
   }
@@ -49,9 +50,9 @@ class Display extends Component {
     this.setState({selected: selected})
   }
 
-  // Handle delete favorite
-  deleteFavorite = (favoriteId) => {
-    fetch(config.API_ENDPOINT + `/api/favorites/delete/${favoriteId}`, {
+  // Handle delete set
+  deleteSet = (setId) => {
+    fetch(config.API_ENDPOINT + `/api/${this.props.selectId}/delete/${setId}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -76,6 +77,8 @@ class Display extends Component {
   }
 
   render() {
+    // if home choose id as favorites, else choose id as inventory 
+    const deleteId = this.state.selected.favorites_id ? this.state.selected.favorites_id : this.state.selected.inventory_id
     const renderSets = this.renderSets()
     const { error } = this.state
     // Scroll to top of page on any event (select set)
@@ -101,15 +104,14 @@ class Display extends Component {
                   className='selected-item_button'
                   onClick={() => {
                     if (window.confirm("Are you sure you want to remove this set?"))
-                    this.deleteFavorite(this.state.selected.favorites_id)
-                    window.location ='/home'
+                    this.deleteSet(deleteId)
+                    window.location.reload()
                   }}>
                   Remove
                 </button>
               </div>
             </div> 
           </>)
-          // : this.props.displayHeader
           : null
           }
           <ul className='display_items'>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
-import { Link } from 'react-router-dom';
+import config from './config';
+import TokenService from './services/token-service';
 
 class Add extends Component {
   constructor(props) {
@@ -37,17 +38,47 @@ class Add extends Component {
     }
   }
 
+  // Handle add set to inventory
+  handleNewSet = e => {
+    e.preventDefault();
+
+    const newSet = {
+      user_id: window.sessionStorage.getItem('user_id'),
+      set_name: this.state.searchResults.name, 
+      image_url: this.state.searchResults.set_img_url, 
+      build_url: this.state.searchResults.set_url 
+    };
+
+    fetch(config.API_ENDPOINT + `/api/inventory`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify(newSet),
+    })
+      // If call is successful
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+      .then(window.location = '/inventory')
+    }
+
   render() {
+    console.log(this.state.searchResults)
+    const { error } = this.state
     return (
       <div className='root_wrapper'>
         <Menu/>
         <form onSubmit={this.handleSetSearch} className='search_set_form'>
           <fieldset>
-            <legend>Add LEGO sets that you own to your virtual collection, then explore more possibilities!</legend>
+            <legend>Add LEGO sets that you own to your inventory, then explore more possibilities!</legend>
             <label htmlFor='search_set'>Set-number:  </label>
             <input type='text' name='search_set' id='search_set' maxLength='6'/>
             <button type='submit'>Search</button>
-            {this.state.error.length ? <p>{this.state.error}</p> : null}
+            {error.length ? <p>{error}</p> : null}
           </fieldset>
         </form>
         {this.state.searchResults ? (
@@ -56,9 +87,7 @@ class Add extends Component {
             <div className='selected-item'>
               <h1>{this.state.searchResults.name}</h1>
               <div className='selected-flex_container'>
-                <Link to='/home'>
-                  <button className='selected-item_button'>Add</button>
-                </Link>
+                <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
                 <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Info</button></a>
               </div>
             </div> 
