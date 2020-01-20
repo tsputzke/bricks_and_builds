@@ -8,7 +8,7 @@ class Inventory extends Component {
     const displayHeader = 'LEGO sets in your collection'
     const selectId = 'inventory'
     return (
-      <div className='root_wrapper'>
+      <div className='main_wrapper'>
         <Menu/>
         <Display displayTitle={displayTitle} displayHeader={displayHeader} selectId={selectId}/>
       </div>

@@ -32,13 +32,13 @@ class Menu extends Component {
               <li className={`menu-nav_item active ${this.state.class}`} onClick={this.toggleMenu}>
                 <Link to='/home' className='menu-nav_link'>Home</Link>
               </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
+              <li className={`menu-nav_item ${this.state.class}`} onClick={this.toggleMenu}>
                 <Link to='/add' className='menu-nav_link'>Add Set</Link>
               </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
+              <li className={`menu-nav_item ${this.state.class}`} onClick={this.toggleMenu}>
                 <Link to='/inventory' className='menu-nav_link'>Inventory</Link>
               </li>
-              <li className={`menu-nav_item ${this.state.class}`}>
+              <li className={`menu-nav_item ${this.state.class}`} onClick={this.toggleMenu}>
                 <Link to='/explore' className='menu-nav_link'>Explore</Link>
               </li>
               <li 

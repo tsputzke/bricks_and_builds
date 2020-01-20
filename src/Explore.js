@@ -97,7 +97,7 @@ class Explore extends Component {
     // Scroll to top of page on any event (select set)
     window.scrollTo(0, 0)
     return (
-      <div className='root_wrapper'>
+      <div className='main_wrapper'>
         <Menu/>
           <main role='main' id='explore'>
             <header className='display-header'>

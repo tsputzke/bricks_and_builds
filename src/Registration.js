@@ -51,7 +51,7 @@ class Registration extends Component {
   render() {
     const { error } = this.state
     return (
-      <div className='root_wrapper'>
+      <div className='main_wrapper'>
         <main role='main' id='registration'>
           <form className='registration_form' onSubmit={this.handleNewUser}>
             <fieldset>

@@ -69,7 +69,7 @@ class Add extends Component {
   render() {
     const { error } = this.state
     return (
-      <div className='root_wrapper'>
+      <div className='main_wrapper'>
         <Menu/>
         <form onSubmit={this.handleSetSearch} className='search_set_form'>
           <fieldset>

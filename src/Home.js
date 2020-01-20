@@ -8,7 +8,7 @@ class Home extends Component {
     const displayHeader = 'Select one of your favorite builds'
     const selectId = 'favorites'
     return (
-      <div className='root_wrapper'>
+      <div className='main_wrapper'>
         <Menu/>
         <Display displayTitle={displayTitle} displayHeader={displayHeader} selectId={selectId}/>
       </div>

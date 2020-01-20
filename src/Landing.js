@@ -58,7 +58,7 @@ class Landing extends Component {
   render() {
     const { error } = this.state
     return (
-      <div className='root_wrapper'>
+      <div className='main_wrapper'>
         <main role='main' id='landing'>
           <section className='landing_title'>
             <h1>Bricks and Builds</h1>
@@ -89,9 +89,15 @@ class Landing extends Component {
               </div>
             </form>
           </section>
-          <section>
+          <section id='about_section'>
             <h2>About</h2>
-            <p>Check out a <span onClick={() => this.handleDemoLogin()}>demo</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu malesuada quam. Nulla sodales enim sed mauris ullamcorper, at convallis nisi dictum. Vestibulum vehicula ante tellus, nec vehicula arcu porttitor at. Nunc varius quis ipsum at convallis. Nunc sed ante non felis ultrices tincidunt. Aenean at semper diam, vitae imperdiet lacus. Nunc vulputate, nibh luctus ornare consectetur, velit turpis faucibus quam, quis finibus lectus nunc at risus. Quisque eu lacus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat luctus, convallis purus in, lobortis nisi.</p>
+            <p>Want to create a digital inventory of your LEGO collection? <span className='emphasize'>Bricks and Builds.</span></p>
+            <br/>
+            <p>Want to explore some amazing alternate builds possible with the pieces that you already have in your collection? <span className='emphasize'>Bricks and Builds.</span></p>
+            <br/>
+            <p>Want to save your favorites builds so you can go back to them any time you want? That's right. <span className='emphasize'>Bricks and Builds.</span></p>
+            <br/>
+            <p>Login to a <span className='link_span' onClick={() => this.handleDemoLogin()}>demo account</span> to see for yourself.</p>
           </section>
         </main>
       </div>
