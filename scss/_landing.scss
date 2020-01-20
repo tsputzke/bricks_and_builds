@@ -6,3 +6,65 @@
 //   align-items: center;
 //   text-align: center;
 // }
+
+#landing {
+  width: 95%;
+  height: 100vh;
+
+  .landing_title {
+    font-size: 1.3em;
+  }
+
+  #login {
+    padding: 1rem 2rem;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 2.5rem auto;
+
+    legend {
+      font-size: 1.1em;
+    }
+
+    fieldset {
+      padding: 1rem;
+      border: none;
+
+      div {
+        text-align: left;
+        font-size: 0.8em;
+
+        input {
+          padding: 2px;
+          border-radius: 3px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .link_span {
+    color: $primary-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #about_section {
+    table tr {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+      font-size: 0.9em;
+
+      td {
+        padding: 0.5rem;
+        border: 1px solid $primary-color;
+
+        .about_icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

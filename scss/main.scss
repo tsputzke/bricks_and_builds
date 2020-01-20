@@ -9,7 +9,7 @@
 body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .main_wrapper {
@@ -27,6 +27,25 @@ main {
 a {
   color: $primary-color;
   text-decoration: none;
+  @include transition;
+  
+  &:hover {
+    cursor: pointer
+  }
+}
+
+button {
+  height: 30px;
+  width: 70px;
+  padding: 3px;
+  color: white;
+  background-color: $primary-color;
+  border-radius: 3px;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer
+  }
 }
 
 // In Add and Display components
