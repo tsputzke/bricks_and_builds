@@ -65,7 +65,7 @@ class Landing extends Component {
             <h1>Bricks and Builds</h1>
             <h5>LEGO Curation Made Easy</h5>
           </section>
-          <section id='login'>
+          <section id='login' className='shadow'>
             <form 
               id='login-form'
               onSubmit={this.handleLogin}  
@@ -93,19 +93,17 @@ class Landing extends Component {
           <section id='about_section'>
             <table>
               <tbody>
-                <tr>
-                  <div>
-                    <td><FA className='about_icon' name='plus-circle'/> </td>
-                    <td>Create a digital inventory of your LEGO collection</td>
-                  </div>
-                  <div>
-                    <td><FA className='about_icon' name='search'/></td>
-                    <td>Explore amazing alternate builds possible with the pieces you already have</td>
-                  </div>
-                  <div>
-                    <td><FA className='about_icon' name='save'/></td>
-                    <td>Save your favorite builds to revisit any time</td>
-                  </div>
+                <tr className='shadow'>
+                  <td><FA className='about_icon' name='plus-circle'/> </td>
+                  <td>Create a digital inventory of your collection</td>
+                </tr>
+                <tr className='shadow'>
+                  <td><FA className='about_icon' name='search'/></td>
+                  <td>Explore amazing alternate builds possible with your collection</td>
+                </tr>
+                <tr className='shadow'>
+                  <td><FA className='about_icon' name='save'/></td>
+                  <td>Save your favorite builds to revisit any time</td>
                 </tr>
               </tbody>
             </table>
