@@ -62,7 +62,7 @@ class Landing extends Component {
       <div className='main_wrapper'>
         <main role='main' id='landing'>
           <section className='landing_title'>
-            <h1>Bricks and Builds</h1>
+            <h1>Brickful Builds</h1>
             <h5>LEGO Curation Made Easy</h5>
           </section>
           <section id='login' className='shadow'>
@@ -85,6 +85,7 @@ class Landing extends Component {
                 <button type='submit'>Login</button>
               </fieldset>
               <h6>Not registered? <br/> <Link to='/registration'><span className='link_span'> Create an account!</span></Link></h6>
+              <h6> OR <br/> <span className='link_span' onClick={() => this.handleDemoLogin()}>Login to a demo account</span></h6>
               <div role='alert'>
                 {error && <p className='error'>{error}</p>}
               </div>
@@ -107,7 +108,6 @@ class Landing extends Component {
                 </tr>
               </tbody>
             </table>
-            <span className='link_span' onClick={() => this.handleDemoLogin()}>Login to a demo account</span>
           </section>
         </main>
       </div>
