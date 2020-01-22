@@ -5,6 +5,7 @@
 @import './home';
 @import './display';
 @import './add';
+@import './explore';
 
 body {
   height: 100vh;
@@ -42,6 +43,13 @@ a {
   }
 }
 
+input {
+  padding: 2px;
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
 button {
   height: 30px;
   width: 70px;
@@ -49,7 +57,7 @@ button {
   color: white;
   background-color: $primary-color;
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 
   &:hover {
     cursor: pointer
@@ -64,15 +72,18 @@ button {
 
 // In Add and Display components
 .selected-item {
+  max-width: 300px; 
+  margin: auto;
+
   .selected-flex_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   
   &_button {
-    height: 50px;
-    width: 150px;
+    height: 40px;
+    width: 110px;
   }
 }
 

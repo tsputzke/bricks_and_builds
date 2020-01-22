@@ -12,6 +12,10 @@ class Add extends Component {
     }
   }
 
+  componentDidMount() {
+    window.sessionStorage.setItem('active', 'add');
+  }
+
   // get set by set_id
   handleSetSearch = e => {
     e.preventDefault();
@@ -71,29 +75,34 @@ class Add extends Component {
     return (
       <div className='main_wrapper'>
         <Menu/>
-        <form onSubmit={this.handleSetSearch} className='search_set_form'>
-          <fieldset>
-            <legend>Add LEGO sets that you own to your inventory, then explore more possibilities!</legend>
-            <label htmlFor='search_set'>Set-number:  </label>
-            <input type='text' name='search_set' id='search_set' maxLength='6'/>
-            <button type='submit'>Search</button>
-            {error.length ? <p>{error}</p> : null}
-          </fieldset>
-        </form>
-        {this.state.searchResults ? (
-          <>
-            <img className='search-image' src={this.state.searchResults.set_img_url} alt='alt'></img>
-            <div className='selected-item'>
-              <h1>{this.state.searchResults.name}</h1>
-              <div className='selected-flex_container'>
-                <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
-                <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Info</button></a>
-              </div>
-            </div> 
-          </>
-        ) : (
-          <img className='search-image' src={LegoSetId} alt='LEGO box with set_id'></img>
-        )}
+        <main role='main' id='add'>
+          <header className='display-header'>
+            <h1>Add</h1>
+            <p>Add sets that you own to your inventory</p>
+          </header>
+          {this.state.searchResults ? (
+            <>
+              <img className='search-image' src={this.state.searchResults.set_img_url} alt='alt'></img>
+              <div className='selected-item'>
+                <h2>{this.state.searchResults.name}</h2>
+                <div className='selected-flex_container'>
+                  <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
+                  <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Info</button></a>
+                </div>
+              </div> 
+            </>
+          ) : (
+            <img className='search-image' src={LegoSetId} alt='LEGO box with set_id'></img>
+          )}
+          <form onSubmit={this.handleSetSearch} className='search_set_form'>
+            <fieldset>
+              <label htmlFor='search_set'>Set-number:  </label>
+              <input type='text' name='search_set' id='search_set' maxLength='6'/>
+              <button type='submit'>Search</button>
+              {error.length ? <p>{error}</p> : null}
+            </fieldset>
+          </form>
+        </main>
       </div>   
     )
   }

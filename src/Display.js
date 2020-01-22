@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import config from './config';
 import TokenService from './services/token-service';
-import Unicorn from './images/unicorn.jpg';
+import HomeImg from './images/lego-home.jpg';
+import InventoryImg from './images/lego-inventory.jpg';
+
 
 class Display extends Component {
   constructor(props) {
@@ -9,11 +11,18 @@ class Display extends Component {
 
     this.state = {
       displaySets: [],
-      selected: {}
+      selected: {},
     }
   }
 
   componentDidMount() {
+    if(this.props.selectId === 'favorites') {
+      this.setState({placeholder: HomeImg})
+    }
+    else if(this.props.selectId === 'inventory') {
+      this.setState({placeholder: InventoryImg})
+    }
+
     // Add array of sets to state
     const userId = window.sessionStorage.getItem('user_id')
     fetch(config.API_ENDPOINT + `/api/${this.props.selectId}/${userId}`, {
@@ -38,7 +47,7 @@ class Display extends Component {
     return userSets.map((set, i) => {
       return <li 
               key={i}
-              className='display_item'
+              className='display_item shadow'
               onClick={() => this.updateSelectedState(set)}> 
               <img src={set.image_url} alt='set in display'></img>
               <p className='set_name'>{set.set_name}</p>
@@ -77,6 +86,7 @@ class Display extends Component {
   }
 
   render() {
+    const placeholder = this.state.placeholder;
     // if home choose id as favorites, else choose id as inventory 
     const deleteId = this.state.selected.favorites_id ? this.state.selected.favorites_id : this.state.selected.inventory_id
     const renderSets = this.renderSets()
@@ -95,7 +105,7 @@ class Display extends Component {
         <section className='selected'>
           {this.state.selected.set_name ? (
           <>
-            <img className='selected_image' src={this.state.selected.image_url} alt='alt'></img>
+            <img className='selected_image shadow' src={this.state.selected.image_url} alt='alt'></img>
             <div className='selected-item'>
               <h2>{this.state.selected.set_name}</h2>
               <div className='selected-flex_container'>
@@ -112,7 +122,7 @@ class Display extends Component {
               </div>
             </div> 
           </>)
-          : <img className='selected_image' src={Unicorn} alt='LEGO unicorn'></img>
+          : <img className='selected_image shadow' src={placeholder} alt='LEGO display'></img>
           }
           <ul className='display_items'>
             {renderSets}

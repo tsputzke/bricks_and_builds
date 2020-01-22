@@ -3,6 +3,10 @@ import Menu from './Menu';
 import Display from './Display';
 
 class Inventory extends Component {
+  componentDidMount() {
+    window.sessionStorage.setItem('active', 'inventory');
+  }
+
   render() {
     const displayTitle = 'Inventory'
     const displayHeader = 'LEGO sets in your collection'

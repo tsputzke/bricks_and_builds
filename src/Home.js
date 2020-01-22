@@ -3,6 +3,10 @@ import Menu from './Menu';
 import Display from './Display';
 
 class Home extends Component {
+  componentDidMount() {
+    window.sessionStorage.setItem('active', 'home');
+  }
+  
   render() {
     const displayTitle = 'Home'
     const displayHeader = 'Select one of your favorite builds'

@@ -55,7 +55,7 @@ class Registration extends Component {
         <main role='main' id='registration'>
           <form className='registration_form' onSubmit={this.handleNewUser}>
             <fieldset>
-              <legend>Register: </legend>
+              <legend>Registration</legend>
               <div>
                 <label htmlFor='user_name'>Username: </label>
                 <input type='text' name='user_name'id='signup-user_name' />
@@ -68,8 +68,7 @@ class Registration extends Component {
                 <label htmlFor='confirm_password'>Confirm Password: </label>
                 <input type='password'name='confirm_password'id='signup-confirm_password' />
               </div>
-              <button type='submit'>Sign Up</button>
-              <p><Link to='/'><span className='link-span'>Already a user?</span></Link></p>
+              <button type='submit'>Register</button>
               <div className="password-rules">
                 <strong>Password must contain: </strong>
                 <ul>
@@ -78,6 +77,7 @@ class Registration extends Component {
                   <li>At least 1 special character.</li>
                 </ul>
               </div>
+              <p><Link to='/'><span className='link-span'>Already a user?</span></Link></p>
             </fieldset>
             <div role='alert'>
               {error && <p className='error'>{error}</p>}

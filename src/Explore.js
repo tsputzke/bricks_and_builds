@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Menu from './Menu';
 import config from './config';
 import TokenService from './services/token-service';
+import Unicorn from './images/unicorn.jpg';
 
 class Explore extends Component {
   constructor(props) {
@@ -9,12 +10,13 @@ class Explore extends Component {
 
     this.state = {
       alternates: [],
-      placeholder: 'https://cdn.rebrickable.com/media/sets/10693-1.jpg',
       selected: {},
     }
   }
 
   componentDidMount() {
+    window.sessionStorage.setItem('active', 'explore');
+
     const alternates = [];
     // Add array of sets to state
     fetch(config.API_ENDPOINT + `/api/inventory/${window.sessionStorage.getItem('user_id')}`, {
@@ -112,14 +114,14 @@ class Explore extends Component {
               <>
                 <img className='selected_image' src={this.state.selected.moc_img_url} alt='alt'></img>
                 <div className='selected-item'>
-                  <h2>Set Name</h2>
+                  <h2>{this.state.selected.name}</h2>
                   <div className='selected-flex_container'>
                     <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
                     <a href={`${this.state.selected.moc_url}/#bi`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
                   </div>
                 </div> 
               </>)
-              : <img className='selected_image' src={this.state.placeholder} alt='alt'></img>
+              : <img className='selected_image shadow' src={Unicorn} alt='LEGO unicorn'></img>
               }
               <ul className='display_items'>
                 {renderSets}

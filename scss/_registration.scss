@@ -1,8 +1,51 @@
-// #registration {
-//   width: 80vh;
-//   margin: auto;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: center;
-// }
+#registration {
+  height: 100vh;
+  margin-top: 20vh;
+}
+
+.registration_form {
+  padding: 1rem 2rem;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 1.5rem auto;
+  background: 
+      linear-gradient(
+        to top,
+        rgba(white, 0.6),
+        rgba(white, 0.8),
+      ),
+      $cream;
+
+  fieldset {
+    padding: 0.5rem;
+    border: none;
+
+    legend {
+      font-size: 1.2em;
+    }
+
+    div {
+      text-align: left;
+      font-size: 0.8em;
+    }
+
+    .password-rules {
+      padding: 0.5rem;
+      border: 1px solid black;
+    }
+
+    ul {
+      width: 80%;
+      margin: auto; 
+    }
+
+    button {
+      margin: 10px 0;
+    }
+
+    p {
+      margin-top: 5px;
+    }
+  }
+}

@@ -7,17 +7,23 @@
 }
 
 .selected {
-  // width: 100%;
+  margin-bottom: 50px;
+  width: 90%;
 
   &_image {
-    width: 100%;
+    border: 2px solid $primary-color;
+    border-radius: 3px;
     height: auto;
-    border: 3px solid $primary-color;
+    width: 100%;
   }
 
   &-item {
     text-align: center;
     color: $secondary-color;
+
+    h2 {
+      margin: 10px 0;
+    }
   }
 }
 
@@ -35,6 +41,7 @@
   height: 223.4px;
   width: 298px;
   border: 1px solid $accent-color;
+  border-radius: 3px;
   overflow: hidden;
 
   &:hover {
