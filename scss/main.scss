@@ -15,10 +15,9 @@ body {
   background: 
     linear-gradient(
       to top,
-      rgba(white, 0.9),
-      rgba(white, 1),
+      rgba($primary-color, 0.5),
+      rgba($primary-color, 0.2),
     ),
-    $primary-color;
 }
 
 .main_wrapper {
