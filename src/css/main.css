@@ -31,7 +31,6 @@
   padding: 1rem 2rem;
   border: 1px solid #4056A1;
   border-radius: 5px;
-  font-size: 1.2em;
   font-weight: bold;
   margin: 1.5rem auto;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.8))), #EFE2BA;
@@ -39,7 +38,7 @@
 }
 
 #landing #login legend {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 #landing #login fieldset {
@@ -271,20 +270,26 @@
   z-index: 1;
   left: 1.5rem;
   top: 1.5rem;
+  color: #D79922;
 }
 
 .display-header {
-  width: 100%;
-  border: 1px solid #4056A1;
+  margin-bottom: 1rem;
+}
+
+.display-header h1 {
+  font-family: 'Press Start 2P', cursive;
 }
 
 .selected_image {
   width: 100%;
   height: auto;
+  border: 3px solid #4056A1;
 }
 
 .selected-item {
   text-align: center;
+  color: #F13C20;
 }
 
 .display_items {
@@ -301,9 +306,9 @@
 }
 
 .display_item {
-  height: 200px;
-  width: 300px;
-  border: 1px solid black;
+  height: 223.4px;
+  width: 298px;
+  border: 1px solid #D79922;
   overflow: hidden;
 }
 
@@ -372,8 +377,8 @@ button {
   padding: 3px;
   color: white;
   background-color: #4056A1;
-  border-radius: 3px;
-  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2em;
 }
 
 button:hover {

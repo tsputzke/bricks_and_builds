@@ -52,7 +52,7 @@ class Menu extends Component {
         </header>
 
         <section className='logged-user' >
-          <h1>Hello, {username}</h1>
+          <h1>{username}</h1>
             <section className='display-favorites'>
               <ul></ul>
             </section>
