@@ -1,8 +1,16 @@
 .display-header {
   margin-bottom: 1rem;
+  text-shadow: white 0px 0px 10px; 
 
   h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    color: $primary-color;
   }
 }
 
@@ -20,10 +28,14 @@
   &-item {
     text-align: center;
     color: $secondary-color;
+  }
 
-    h2 {
-      margin: 10px 0;
-    }
+  h2 {
+    margin: 10px 0;
+  }
+
+  .display_add {
+    list-style: none;
   }
 }
 

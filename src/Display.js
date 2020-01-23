@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import config from './config';
 import TokenService from './services/token-service';
 import HomeImg from './images/lego-home.jpg';
@@ -17,10 +18,10 @@ class Display extends Component {
 
   componentDidMount() {
     if(this.props.selectId === 'favorites') {
-      this.setState({placeholder: HomeImg})
+      this.setState({selected: {image_url: HomeImg}})
     }
     else if(this.props.selectId === 'inventory') {
-      this.setState({placeholder: InventoryImg})
+      this.setState({selected: {image_url: InventoryImg}})
     }
 
     // Add array of sets to state
@@ -86,7 +87,6 @@ class Display extends Component {
   }
 
   render() {
-    const placeholder = this.state.placeholder;
     // if home choose id as favorites, else choose id as inventory 
     const deleteId = this.state.selected.favorites_id ? this.state.selected.favorites_id : this.state.selected.inventory_id
     const renderSets = this.renderSets()
@@ -97,19 +97,19 @@ class Display extends Component {
       <main role='main' id='display' >
         <header className='display-header'>
           <h1>{this.props.displayTitle}</h1>
-          <p>{this.props.displayHeader}</p>
+          <h5>{this.props.displayHeader}</h5>
         </header>
         <div role='alert'>
           {error && <p className='error'>{error}</p>}
         </div>
         <section className='selected'>
+          <img className='selected_image shadow' src={this.state.selected.image_url} alt='lego build'></img>
           {this.state.selected.set_name ? (
           <>
-            <img className='selected_image shadow' src={this.state.selected.image_url} alt='alt'></img>
             <div className='selected-item'>
               <h2>{this.state.selected.set_name}</h2>
               <div className='selected-flex_container'>
-                <a href={`https://rebrickable.com/instructions/${this.state.selected.set_num}`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
+                <a href={`https://rebrickable.com/mocs/${this.state.selected.set_num}`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
                 <button 
                   className='selected-item_button'
                   onClick={() => {
@@ -122,10 +122,15 @@ class Display extends Component {
               </div>
             </div> 
           </>)
-          : <img className='selected_image shadow' src={placeholder} alt='LEGO display'></img>
+          : null
           }
           <ul className='display_items'>
             {renderSets}
+            {(this.props.selectId === 'favorites') ? 
+              (<li className='display_add'> 
+                <Link to='/add'><button>Add Set</button></Link>
+              </li>)
+            : null}
           </ul>
         </section>  
       </main>

@@ -1,5 +1,4 @@
 #registration {
-  height: 100vh;
   margin-top: 20vh;
 }
 
@@ -22,17 +21,23 @@
     border: none;
 
     legend {
-      font-size: 1.2em;
+      font-size: 1.5em;
+      margin: 10px auto; 
     }
 
     div {
       text-align: left;
-      font-size: 0.8em;
+      font-size: 1em;
     }
 
     .password-rules {
       padding: 0.5rem;
-      border: 1px solid black;
+      font-size: 0.9rem;
+      font-weight: normal;
+
+      p {
+        font-weight: bold;
+      }
     }
 
     ul {

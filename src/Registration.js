@@ -70,7 +70,7 @@ class Registration extends Component {
               </div>
               <button type='submit'>Register</button>
               <div className="password-rules">
-                <strong>Password must contain: </strong>
+                <p>Password must contain: </p>
                 <ul>
                   <li>5+ characters.</li>
                   <li>At least 1 number.</li>

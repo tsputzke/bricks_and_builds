@@ -1,5 +1,4 @@
 #add {
- height: 100vh;
 
  h2 {
   margin: 8px 0;
@@ -22,7 +21,7 @@
 }
 
 .search_set_form {
-  width: 300px;
+  width: 280px;
   margin: 20px auto;
 }
 
@@ -43,5 +42,9 @@
   fieldset {
     padding: 0.5rem;
     border: none;
+
+    input {
+      margin: 10px auto;
+    }
   }
 }

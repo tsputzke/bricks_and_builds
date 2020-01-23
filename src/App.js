@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './css/main.css';
-import PrivateRoute from '../src/utils/PrivateOnlyRoute'
-import PublicOnlyRoute from '../src/utils/PublicOnlyRoute'
+import PrivateRoute from '../src/utils/PrivateOnlyRoute';
+import PublicOnlyRoute from '../src/utils/PublicOnlyRoute';
+import TokenService from './services/token-service';
 
 import Landing from './Landing';
 import Registration from './Registration';
@@ -13,6 +14,13 @@ import Inventory from './Inventory';
 
 class App extends Component {
   render() {
+
+    // If user is logged in
+    if (TokenService.hasAuthToken()) {
+      // Read the JWT, and queue a timeout just before the token expires.  
+      TokenService.queueCallbackBeforeExpiry()
+    }
+
     return (
       <Switch>
         <PublicOnlyRoute

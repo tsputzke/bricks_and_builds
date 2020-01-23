@@ -77,8 +77,8 @@ class Add extends Component {
         <Menu/>
         <main role='main' id='add'>
           <header className='display-header'>
-            <h1>Add</h1>
-            <p>Add sets that you own to your inventory</p>
+            <h1>Add Set</h1>
+            <h5>Add sets that you own to your inventory</h5>
           </header>
           {this.state.searchResults ? (
             <>

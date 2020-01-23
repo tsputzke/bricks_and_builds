@@ -9,7 +9,7 @@ class Home extends Component {
   
   render() {
     const displayTitle = 'Home'
-    const displayHeader = 'Select one of your favorite builds'
+    const displayHeader = 'Your favorite alternate builds'
     const selectId = 'favorites'
     return (
       <div className='main_wrapper'>

@@ -49,7 +49,7 @@ const TokenService = {
         in this app, the callback is for calling the refresh endpoint
     */
     setTimeout(() => {
-        /* the timoue will call this callback just before the token expires */
+        /* the timout will call this callback just before the token expires */
         sessionStorage.clear()
         window.location.reload()
       }, msUntilExpiry - _FIVE_SECONDS_IN_MS)

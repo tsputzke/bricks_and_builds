@@ -100,7 +100,7 @@ class Landing extends Component {
                 </tr>
                 <tr className='shadow'>
                   <td><FA className='about_icon' name='search'/></td>
-                  <td>Explore amazing alternate builds possible with your collection</td>
+                  <td>Explore alternate builds possible with your collection</td>
                 </tr>
                 <tr className='shadow'>
                   <td><FA className='about_icon' name='save'/></td>

@@ -7,24 +7,21 @@
 
 #landing {
   width: 95%;
-  height: 100vh;
 }
 
 #landing .landing_title {
-  font-family: 'Press Start 2P', cursive;
-  letter-spacing: 0;
-  color: black;
   text-shadow: white 0px 0px 10px;
-  width: 230px;
-  font-size: 1.2em;
+}
+
+#landing .landing_title h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
 }
 
 #landing .landing_title h5 {
-  margin-top: 0.5em;
   color: #4056A1;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.05em;
-  font-size: 0.8em;
+  font-size: 1.1rem;
 }
 
 #landing #login {
@@ -38,7 +35,7 @@
 }
 
 #landing #login legend {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 #landing #login fieldset {
@@ -48,6 +45,14 @@
 
 #landing #login fieldset div {
   text-align: left;
+  font-size: 1em;
+}
+
+#landing #login fieldset button {
+  margin-top: 5px;
+}
+
+#landing #login h6 {
   font-size: 0.8em;
 }
 
@@ -76,8 +81,8 @@
   height: 80px;
   width: 90%;
   max-width: 320px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.9))), url(../images/yellow-lego-background.jpg) top center no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(../images/yellow-lego-background.jpg) top center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.9))), #EFE2BA;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), #EFE2BA;
 }
 
 #landing #about_section table tr:nth-child(1) td:nth-child(1) {
@@ -101,7 +106,6 @@
 }
 
 #registration {
-  height: 100vh;
   margin-top: 20vh;
 }
 
@@ -121,17 +125,23 @@
 }
 
 .registration_form fieldset legend {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  margin: 10px auto;
 }
 
 .registration_form fieldset div {
   text-align: left;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .registration_form fieldset .password-rules {
   padding: 0.5rem;
-  border: 1px solid black;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.registration_form fieldset .password-rules p {
+  font-weight: bold;
 }
 
 .registration_form fieldset ul {
@@ -311,14 +321,23 @@
   left: 1.5rem;
   top: 1.5rem;
   color: #D79922;
+  text-transform: uppercase;
 }
 
 .display-header {
   margin-bottom: 1rem;
+  text-shadow: white 0px 0px 10px;
 }
 
 .display-header h1 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+}
+
+.display-header h5 {
+  font-size: 1.1rem;
+  color: #4056A1;
 }
 
 .selected {
@@ -338,8 +357,12 @@
   color: #F13C20;
 }
 
-.selected-item h2 {
+.selected h2 {
   margin: 10px 0;
+}
+
+.selected .display_add {
+  list-style: none;
 }
 
 .display_items {
@@ -372,10 +395,6 @@
   height: auto;
 }
 
-#add {
-  height: 100vh;
-}
-
 #add h2 {
   margin: 8px 0;
 }
@@ -398,7 +417,7 @@
 }
 
 .search_set_form {
-  width: 300px;
+  width: 280px;
   margin: 20px auto;
 }
 
@@ -417,9 +436,8 @@
   border: none;
 }
 
-#explore {
-  height: 100%;
-  min-height: 100vh;
+.search_set_form fieldset input {
+  margin: 10px auto;
 }
 
 body {
@@ -449,6 +467,8 @@ main {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  height: 100%;
+  min-height: 100vh;
 }
 
 a {
@@ -470,13 +490,13 @@ input {
 }
 
 button {
-  height: 30px;
-  width: 70px;
+  height: 40px;
+  width: 80px;
   padding: 3px;
   color: white;
   background-color: #4056A1;
   border-radius: 5px;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 button:hover {
@@ -491,9 +511,17 @@ button:hover {
   /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
+.error {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #F13C20;
+  padding: 0.2rem;
+  border: 1px solid #F13C20;
+}
+
 .selected-item {
   max-width: 300px;
-  margin: auto;
+  margin: 5px auto;
 }
 
 .selected-item .selected-flex_container {
