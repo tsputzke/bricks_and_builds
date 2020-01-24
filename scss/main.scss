@@ -6,6 +6,7 @@
 @import './display';
 @import './add';
 @import './explore';
+@import './responsive';
 
 body {
   height: 100vh;
@@ -16,8 +17,8 @@ body {
   background: 
     linear-gradient(
       to top,
-      rgba($primary-color, 0.5),
-      rgba($primary-color, 0.2),
+      rgba($lightblue, 0.8),
+      rgba($lightblue, 0.4),
     ),
 }
 
@@ -36,11 +37,12 @@ main {
 }
 
 a {
-  color: $primary-color;
+  color: $secondary-color;
   text-decoration: none;
-  @include transition;
+  transition: all 0.1s ease-in-out;
   
   &:hover {
+    color: $lightblue;
     cursor: pointer
   }
 }
@@ -57,16 +59,17 @@ button {
   width: 80px;
   padding: 3px;
   color: white;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   border: 1px solid black;
   border-radius: 5px;
   font-size: 1.2em;
+  transition: all 0.1s ease-in-out;
 
   &:hover {
     cursor: pointer;
-    -moz-box-shadow: 0 0 8px rgba(33,33,33,.7); 
-    -webkit-box-shadow: 0 0 8px rgba(33,33,33,.7); 
-    box-shadow: 0 0 8px rgba(33,33,33,.7); 
+    -moz-box-shadow: 0 0 10px rgba(33,33,33,.7); 
+    -webkit-box-shadow: 0 0 10px rgba(33,33,33,.7); 
+    box-shadow: 0 0 10px rgba(33,33,33,.7); 
   }
 }
 
@@ -92,7 +95,7 @@ button {
   .selected-flex_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   
   &_button {

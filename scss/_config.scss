@@ -1,11 +1,11 @@
-$gold: #D79922;
 $cream: #EFE2BA;
-$red: #F13C20;
-$blue: #4056A1;
+$gold: #D79922;
 $lightblue: #C5CBE3;
+$blue: #4056A1;
+$red: #F13C20;
 
-$primary-color: $blue;
-$secondary-color: $red;
+$primary-color: $cream;
+$secondary-color: $blue;
 $accent-color: $gold;
 
 * {
@@ -16,4 +16,22 @@ $accent-color: $gold;
 
 @mixin transition {
   transition: all 0.5s ease-in-out;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1050px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
 }

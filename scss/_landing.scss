@@ -11,24 +11,24 @@
     }
 
     h5 {
-      color: $primary-color;
       font-size: 1.1rem;
+      text-shadow: $secondary-color 0px 0px 8px;
     }
   }
 
   #login {
     padding: 1rem 2rem;
-    border: 1px solid $primary-color;
+    border: 1px solid $accent-color;
     border-radius: 5px;
     font-weight: bold;
     margin: 1.5rem auto;
     background: 
         linear-gradient(
           to top,
-          rgba(white, 0.6),
-          rgba(white, 0.8),
+          rgba(white, 0.5),
+          rgba(white, 0.9),
         ),
-        $cream;
+        $primary-color;
 
     legend {
       font-size: 1.5em;
@@ -49,19 +49,23 @@
     }
 
     h6 {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
   }
 
   .link_span {
-    color: $primary-color;
+    color: $blue;
+    transition: all 0.1s ease-in-out;
+    
     &:hover {
+      color: $lightblue;
       cursor: pointer;
     }
   }
 
   #about_section {    
-    width: 320px;
+    width: 330px;
+    margin-right: 0.5rem;
 
     table tr {
       border: none;
@@ -71,12 +75,23 @@
       font-weight: bold;
 
       td {
-        padding-bottom: 0.3rem;
-        padding-left: 0.5rem;
-        margin: 10px auto;
+        padding: 0 0 1.5rem 1rem;
 
         .about_icon {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .create_icon {
+          color: $red;
+        }
+
+        .explore_icon {
+          color: $accent-color;
+        }
+
+        .save_icon {
+          color: $secondary-color;
         }
       }
     }

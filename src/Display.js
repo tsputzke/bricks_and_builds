@@ -111,7 +111,7 @@ class Display extends Component {
               <div className='selected-flex_container'>
                 <a href={`https://rebrickable.com/mocs/${this.state.selected.set_num}`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
                 <button 
-                  className='selected-item_button'
+                  className='selected-item_button remove_button'
                   onClick={() => {
                     if (window.confirm("Are you sure you want to remove this set?"))
                     this.deleteSet(deleteId)
@@ -126,12 +126,10 @@ class Display extends Component {
           }
           <ul className='display_items'>
             {renderSets}
-            {(this.props.selectId === 'favorites') ? 
-              (<li className='display_add'> 
-                <Link to='/add'><button>Add Set</button></Link>
-              </li>)
-            : null}
           </ul>
+          {(this.props.selectId === 'favorites') ? 
+            (<Link to='/add'><button className='addset_button'>Add Set</button></Link>)
+          : null}
         </section>  
       </main>
     )

@@ -117,7 +117,7 @@ class Explore extends Component {
                   <h2>{this.state.selected.name}</h2>
                   <div className='selected-flex_container'>
                     <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
-                    <a href={`${this.state.selected.moc_url}/#bi`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
+                    <a href={`${this.state.selected.moc_url}/#bi`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button build_button'>Build</button></a>
                   </div>
                 </div>) 
                 : null

@@ -6,6 +6,10 @@
 
   .selected-item {
     width: 100%;
+
+    .info_button {
+      background-color: $gold;
+    }
   }
 }
 
@@ -17,7 +21,8 @@
   display: flex;
   width: 90%;
   height: auto;
-  border: 2px solid $primary-color;
+  border: 2px solid $accent-color;
+  border-radius: 5px;
 }
 
 .search_set_form {
@@ -27,17 +32,17 @@
 
 .search_set_form {
   padding: 0.5rem 1rem;
-  border: 1px solid $primary-color;
+  border: 1px solid $accent-color;
   border-radius: 5px;
   font-weight: bold;
   margin: 1.5rem auto;
   background: 
-      linear-gradient(
-        to top,
-        rgba(white, 0.6),
-        rgba(white, 0.8),
-      ),
-      $cream;
+    linear-gradient(
+      to top,
+      rgba(white, 0.5),
+      rgba(white, 0.9),
+    ),
+    $primary-color;
 
   fieldset {
     padding: 0.5rem;

@@ -16,7 +16,7 @@
     top: 1rem;
     width: 40px;
     height: 4px;
-    background: $primary-color;
+    background: $secondary-color;
     @include transition;
 
     &::before {
@@ -25,7 +25,7 @@
       top: -10px;
       width: 40px;
       height: 4px;
-      background: $primary-color;
+      background: $secondary-color;
       @include transition;
     }
 
@@ -35,7 +35,7 @@
       top: 10px;
       width: 34px;
       height: 4px;
-      background: $primary-color;
+      background: $secondary-color;
       @include transition;
     }
 
@@ -72,7 +72,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: $accent-color;
+    background: $primary-color;
     list-style: none;
     transform: translateY(-100%);
     @include transition;
@@ -90,7 +90,7 @@
       }
 
       &.active > a {
-        color: $secondary-color;
+        color: $red;
       }
     }
 
@@ -102,7 +102,7 @@
       @include transition;
 
       &:hover {
-        color: $secondary-color;
+        color: $accent-color;
       }
     }
   }
@@ -121,6 +121,7 @@
   z-index: 1;
   left: 1.5rem;
   top: 1.5rem;
-  color: $accent-color;
+  color: white;
+  text-shadow: $secondary-color 0px 0px 10px;
   text-transform: uppercase;
 }

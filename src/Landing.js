@@ -85,7 +85,7 @@ class Landing extends Component {
                 <button type='submit'>Login</button>
               </fieldset>
               <h6>Not registered? <br/> <Link to='/registration'><span className='link_span'> Create an account!</span></Link></h6>
-              <h6> OR <br/> <span className='link_span' onClick={() => this.handleDemoLogin()}>Login to a demo account</span></h6>
+              <h6> OR <br/> <span className='link_span' onClick={() => this.handleDemoLogin()}>Login to TestUser</span></h6>
               <div role='alert'>
                 {error && <p className='error'>{error}</p>}
               </div>
@@ -95,15 +95,15 @@ class Landing extends Component {
             <table>
               <tbody>
                 <tr>
-                  <td><FA className='about_icon' name='plus-circle'/> </td>
+                  <td><FA className='about_icon create_icon' name='plus-circle'/> </td>
                   <td>Create a digital inventory of your collection</td>
                 </tr>
                 <tr>
-                  <td><FA className='about_icon' name='search'/></td>
+                  <td><FA className='about_icon explore_icon' name='search'/></td>
                   <td>Explore alternate builds possible with your collection</td>
                 </tr>
                 <tr>
-                  <td><FA className='about_icon' name='save'/></td>
+                  <td><FA className='about_icon save_icon' name='save'/></td>
                   <td>Save your favorite builds to revisit any time</td>
                 </tr>
               </tbody>

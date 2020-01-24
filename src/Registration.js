@@ -53,7 +53,7 @@ class Registration extends Component {
     return (
       <div className='main_wrapper'>
         <main role='main' id='registration'>
-          <form className='registration_form' onSubmit={this.handleNewUser}>
+          <form className='registration_form shadow' onSubmit={this.handleNewUser}>
             <fieldset>
               <legend>Registration</legend>
               <div>

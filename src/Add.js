@@ -87,7 +87,7 @@ class Add extends Component {
                 <h2>{this.state.searchResults.name}</h2>
                 <div className='selected-flex_container'>
                   <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
-                  <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Info</button></a>
+                  <a href={this.state.searchResults.set_url} rel='noopener noreferrer' target='_blank'><button className='selected-item_button info_button'>Info</button></a>
                 </div>
               </div> 
             </>
