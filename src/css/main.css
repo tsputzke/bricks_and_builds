@@ -64,41 +64,22 @@
   cursor: pointer;
 }
 
+#landing #about_section {
+  width: 320px;
+}
+
 #landing #about_section table tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  border: none;
   margin: 0 auto 10px;
   padding: 0.5rem 1rem;
   font-size: 0.9em;
   font-weight: bold;
-  border: 1px solid #4056A1;
-  border-radius: 10px;
-  height: 80px;
-  width: 90%;
-  max-width: 320px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.9))), #EFE2BA;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), #EFE2BA;
-}
-
-#landing #about_section table tr:nth-child(1) td:nth-child(1) {
-  color: #D79922;
-}
-
-#landing #about_section table tr:nth-child(2) td:nth-child(1) {
-  color: #4056A1;
-}
-
-#landing #about_section table tr:nth-child(3) td:nth-child(1) {
-  color: #F13C20;
 }
 
 #landing #about_section table tr td {
   padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  margin: 10px auto;
 }
 
 #landing #about_section table tr td .about_icon {
@@ -382,12 +363,14 @@
   height: 223.4px;
   width: 298px;
   border: 1px solid #D79922;
-  border-radius: 3px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .display_item:hover {
   cursor: pointer;
+  -webkit-box-shadow: 0 0 8px rgba(33, 33, 33, 0.7);
+  box-shadow: 0 0 8px rgba(33, 33, 33, 0.7);
 }
 
 .display_item img {
@@ -495,12 +478,15 @@ button {
   padding: 3px;
   color: white;
   background-color: #4056A1;
+  border: 1px solid black;
   border-radius: 5px;
   font-size: 1.2em;
 }
 
 button:hover {
   cursor: pointer;
+  -webkit-box-shadow: 0 0 8px rgba(33, 33, 33, 0.7);
+  box-shadow: 0 0 8px rgba(33, 33, 33, 0.7);
 }
 
 .shadow {

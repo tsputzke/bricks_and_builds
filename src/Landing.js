@@ -94,15 +94,15 @@ class Landing extends Component {
           <section id='about_section'>
             <table>
               <tbody>
-                <tr className='shadow'>
+                <tr>
                   <td><FA className='about_icon' name='plus-circle'/> </td>
                   <td>Create a digital inventory of your collection</td>
                 </tr>
-                <tr className='shadow'>
+                <tr>
                   <td><FA className='about_icon' name='search'/></td>
                   <td>Explore alternate builds possible with your collection</td>
                 </tr>
-                <tr className='shadow'>
+                <tr>
                   <td><FA className='about_icon' name='save'/></td>
                   <td>Save your favorite builds to revisit any time</td>
                 </tr>
