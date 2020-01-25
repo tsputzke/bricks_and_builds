@@ -102,7 +102,9 @@ class Add extends Component {
               <label htmlFor='search_set'>Set-number:  </label>
               <input type='text' name='search_set' id='search_set' maxLength='6'/>
               <button type='submit'>Search</button>
-              {error.length ? <p className='error'>{error}</p> : null}
+              <div role='alert'>
+              {error && <p className='error'>{error}</p>}
+              </div>
             </fieldset>
           </form>
         </main>

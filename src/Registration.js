@@ -72,9 +72,9 @@ class Registration extends Component {
               <div className="password-rules">
                 <p>Password must contain: </p>
                 <ul>
-                  <li>5+ characters.</li>
-                  <li>At least 1 number.</li>
-                  <li>At least 1 special character.</li>
+                  <li>5+ characters</li>
+                  <li>1+ number(s)</li>
+                  <li>1+ special character(s)</li>
                 </ul>
               </div>
               <p><Link to='/'><span className='link-span'>Already a user?</span></Link></p>

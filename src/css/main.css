@@ -7,6 +7,7 @@
 
 #landing {
   width: 95%;
+  margin-top: 2.5rem;
 }
 
 #landing .landing_title {
@@ -102,7 +103,8 @@
 }
 
 #registration {
-  margin-top: 20vh;
+  width: 95%;
+  margin-top: 2.5rem;
 }
 
 .registration_form {
@@ -273,7 +275,7 @@
 .nav .menu-nav_link {
   display: inline-block;
   font-size: 2rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-weight: 300;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -502,8 +504,8 @@
         grid-template-columns: 1fr 1fr;
   }
   .display_item {
-    height: 150px;
-    width: 200px;
+    height: 188px;
+    width: 250px;
     margin: 10px auto;
   }
 }
@@ -547,12 +549,8 @@ body {
   background: linear-gradient(to top, rgba(197, 203, 227, 0.8), rgba(197, 203, 227, 0.4));
 }
 
-.main_wrapper {
-  margin-top: 5rem;
-}
-
 main {
-  margin: auto;
+  margin: 5rem auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
