@@ -1,6 +1,10 @@
 @include media-md {
   main {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+
+  .username_header {
+    top: 2rem;
   }
   
   .menu {
@@ -55,6 +59,7 @@
   .display_item {
     height: 150px;
     width: 200px;
+    margin: 10px auto;  
   }
 }
 
@@ -62,6 +67,10 @@
   .nav {
     .menu-nav {
       padding-right: 2rem;
+
+      &_link {
+        font-weight: 500;
+      }
     }
   }
 
@@ -70,7 +79,8 @@
   }
 
   .selected_image {
-    width: 35%;
+    width: 45%;
+    max-width: 500px;
   }
 
   .search-image {
@@ -85,11 +95,6 @@
   .display_item {
     height: 223.4px;
     width: 298px;
-  }
-}
-
-@include media-xl {
-  .selected_image {
-    width: 30%;
+    margin: 20px auto;  
   }
 }

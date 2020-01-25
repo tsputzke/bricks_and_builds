@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 import Display from './Display';
+import Context from './Context';
 
 class Inventory extends Component {
+  static contextType = Context
+
   componentDidMount() {
-    window.sessionStorage.setItem('active', 'inventory');
+    this.context.handleActive('inventory');
   }
 
   render() {

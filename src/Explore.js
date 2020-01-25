@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Menu from './Menu';
 import config from './config';
 import TokenService from './services/token-service';
 import Unicorn from './images/unicorn.jpg';
+import Context from './Context';
 
 class Explore extends Component {
+  static contextType = Context
+
   constructor(props) {
     super(props) 
 
@@ -16,7 +18,7 @@ class Explore extends Component {
   }
 
   componentDidMount() {
-    window.sessionStorage.setItem('active', 'explore');
+    this.context.handleActive('explore');
 
     const alternates = [];
     // Add array of sets to state
@@ -105,7 +107,7 @@ class Explore extends Component {
           <main role='main' id='explore'>
             <header className='display-header'>
               <h1>Explore</h1>
-              <p>Find some inspiration</p>
+              <h5>Find some inspiration</h5>
             </header>
             <div role='alert'>
               {error && <p className='error'>{error}</p>}

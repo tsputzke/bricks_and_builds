@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Context from './Context';
 
 class Menu extends Component {
+  static contextType = Context
+
   constructor(props) {
     super(props);
     
@@ -19,7 +22,7 @@ class Menu extends Component {
   }
 
   render() {
-    const active = window.sessionStorage.getItem('active')
+    const active = this.context.active;
     const username = window.sessionStorage.getItem('user_name')
     return (
       <div className='menu_wrapper'>

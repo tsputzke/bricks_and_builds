@@ -3,8 +3,11 @@ import Menu from './Menu';
 import config from './config';
 import TokenService from './services/token-service';
 import LegoSetId from './images/lego-set_id.jpg';
+import Context from './Context';
 
 class Add extends Component {
+  static contextType = Context
+
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +16,7 @@ class Add extends Component {
   }
 
   componentDidMount() {
-    window.sessionStorage.setItem('active', 'add');
+    this.context.handleActive('add');
   }
 
   // get set by set_id
@@ -99,7 +102,7 @@ class Add extends Component {
               <label htmlFor='search_set'>Set-number:  </label>
               <input type='text' name='search_set' id='search_set' maxLength='6'/>
               <button type='submit'>Search</button>
-              {error.length ? <p>{error}</p> : null}
+              {error.length ? <p className='error'>{error}</p> : null}
             </fieldset>
           </form>
         </main>
