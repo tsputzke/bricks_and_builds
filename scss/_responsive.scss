@@ -49,7 +49,7 @@
   .display_items {
     margin: 2rem auto;
     width: 70%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
   .display_item {
@@ -59,8 +59,18 @@
 }
 
 @include media-lg {
+  .nav {
+    .menu-nav {
+      padding-right: 2rem;
+    }
+  }
+
+  .username_header {
+    left: 3rem;
+  }
+
   .selected_image {
-    width: 50%;
+    width: 35%;
   }
 
   .search-image {
@@ -69,7 +79,7 @@
 
   .display_items {
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .display_item {
@@ -80,20 +90,6 @@
 
 @include media-xl {
   .selected_image {
-    width: 40%;
-  }
-
-  .search-image {
-    width: 20%;
-  }
-
-  .display_items {
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .display_item {
-    height: 223.4px;
-    width: 298px;
+    width: 30%;
   }
 }

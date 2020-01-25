@@ -100,7 +100,7 @@ class Landing extends Component {
                 </tr>
                 <tr>
                   <td><FA className='about_icon explore_icon' name='search'/></td>
-                  <td>Explore alternate builds possible with your collection</td>
+                  <td>Explore alternate builds possible with your LEGO sets</td>
                 </tr>
                 <tr>
                   <td><FA className='about_icon save_icon' name='save'/></td>
