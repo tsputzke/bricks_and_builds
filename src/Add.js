@@ -27,7 +27,7 @@ class Add extends Component {
       this.setState({error: 'Enter set number to continue'})
     } else {
     const searchTerm = e.target.search_set.value.trim();
-    fetch(`http://localhost:8000/api/rebrickable/${searchTerm}`, {
+    fetch(config.API_ENDPOINT + `/api/rebrickable/${searchTerm}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     })
