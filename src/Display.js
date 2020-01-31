@@ -109,7 +109,11 @@ class Display extends Component {
             <div className='selected-item'>
               <h2>{this.state.selected.set_name}</h2>
               <div className='selected-flex_container'>
-                <a href={`https://rebrickable.com/mocs/${this.state.selected.set_num}`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
+                {this.state.selected.favorites_id ? 
+                  <a href={`https://rebrickable.com/mocs/${this.state.selected.set_num}/#bi`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
+                  : 
+                  <a href={`https://rebrickable.com/sets/${this.state.selected.set_num}/#bi`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button'>Build</button></a>
+                }
                 <button 
                   className='selected-item_button remove_button'
                   onClick={() => {
