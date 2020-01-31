@@ -107,7 +107,7 @@ class Explore extends Component {
           <main role='main' id='explore'>
             <header className='display-header'>
               <h1>Explore</h1>
-              <h5>Find some inspiration</h5>
+              <h5>Find inspiration, save to favorites</h5>
             </header>
             <div role='alert'>
               {error && <p className='error'>{error}</p>}
@@ -118,7 +118,7 @@ class Explore extends Component {
                 (<div className='selected-item'>
                   <h2>{this.state.selected.name}</h2>
                   <div className='selected-flex_container'>
-                    <button onClick={this.handleNewSet} className='selected-item_button'>Add</button>
+                    <button onClick={this.handleNewSet} className='selected-item_button'>Save</button>
                     <a href={`${this.state.selected.moc_url}/#bi`} rel='noopener noreferrer' target='_blank'><button className='selected-item_button build_button'>Build</button></a>
                   </div>
                 </div>) 
